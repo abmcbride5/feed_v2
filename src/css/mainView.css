@@ -1,0 +1,43 @@
+.main {
+    color: white;
+}
+.aside {
+    position: fixed;
+    width: 20em;
+    height: 200em;
+    background-color: #3f0f3f;
+    z-index:1;
+}
+.feed {
+    position: fixed;
+    color: black;
+    left: 40em;
+    width: 33%;
+    /* overflow-y:scroll; */
+
+}
+.threadContent{
+    position: fixed;
+    color: black;
+    border-left: 0.5px solid black;
+    /* padding: 1%; */
+    height: 100%;
+    left: 59em;
+    top: 5em;
+    z-index: -1;
+    overflow-y:scroll;
+}
+.threadContentMessages{
+    position: relative;
+    left: 17em;
+    top: -6em;
+}
+hr {
+    position: relative;
+    top: 3em;
+    left: -44em;
+    width: 45em;
+}
+.bottom_background {
+    background-color: white;
+}

@@ -1,0 +1,15 @@
+.purple_aside {
+    width: 5em;
+    height: 50em;
+    border-right: 0.1px solid #B19CD9;
+    z-index:2;
+}
+.purple_menu_top {
+    height: 3em;
+    width: 15em;
+    border-bottom: 0.1px solid #B19CD9 ;
+}
+.purple_menu_bottom {
+    height: 45em;
+    width: 15em;
+}

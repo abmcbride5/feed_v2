@@ -1,0 +1,24 @@
+.fakePhotoThread{
+    background-color: lightgray;
+    height: 1em;
+    width: 1em;
+    border-radius: 20%;
+    position: relative;
+    top: 1em;
+    left: 2em;
+}
+.replyTable{
+    position: relative;
+    top: -0.5em;
+    left: -14.5em;
+}
+.threadReplyCount{
+    position: relative;
+    top: 1em;
+    left: 2em; 
+}
+.replyButton{
+    border: none;
+    color: blue;
+    background-color: transparent;
+}
