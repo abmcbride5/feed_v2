@@ -5,8 +5,9 @@ import '../css/aside.css';
 
 export default function Aside (props) {
     return (
-        <div>
-        <table>
+        <div >
+        <table className="aside">
+            <tbody>
             <tr>
                 <td className="purple_aside">
                     
@@ -17,13 +18,14 @@ export default function Aside (props) {
                         <MainChannel name="Buttons For Kittens"/>
                     </div>
                     <div className="purple_menu_bottom">
-                        <h3>Channels</h3>
+                        <h3 className="channel_header">Channels</h3>
                         <SubChannel name="A" click1={props.click} click2={props.show} />
                         <SubChannel name="B" click1={props.click} click2={props.show} />
                         <SubChannel name="C" click1={props.click} click2={props.show} />
                     </div>
                 </td>
             </tr>
+            </tbody>
         </table>
 
     </div>

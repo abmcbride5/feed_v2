@@ -7,13 +7,12 @@ import '../css/mainView.css';
 import threads from '../data/threads';
 import messages from '../data/messages';
 
-
-export default function Main() {
-   const [channel, setChannel] = useState('');
-   const [repliesList, setRepliesList] = useState([]);
-   const [leadingThread, setLeadingThread] = useState('');
-   const [showReplies, setShowReplies] = useState(false);
-   const placeHolder = 'message #' + channel;
+export default function Main(){
+    const [channel, setChannel] = useState('');
+    const [repliesList, setRepliesList] = useState([]);
+    const [leadingThread, setLeadingThread] = useState('');
+    const [showReplies, setShowReplies] = useState(false);
+    const placeHolder = 'message #' + channel;
 
     function giveThreads(channelSelected){
         const threadList = Object.values(threads);
@@ -35,31 +34,27 @@ export default function Main() {
         }
         return renderRepliesList;    
     }
- 
-   return (
-    <div className="main">
-        <table>
-            <tr>
-                <td className="aside">
-                <Aside click={setChannel} show={setShowReplies}/>
-                </td>
-                <td className="feed">
-                    <div>{giveThreads(channel)}</div>
-                   <div>
-                       <Reply holder={placeHolder} class={!showReplies ? 'textArea': 'textAreaShort'} />
-                       </div>
-                </td>
-                {showReplies &&( 
-                <td className="threadContent">
-                    <div className="threadContentMessages">
-                        {renderReplies(leadingThread, repliesList)}
-                    </div>
-                        <div className="bottom_background">
-                            <Reply holder="#reply" class='textAreaShowReplies' />
-                        </div>
-                </td> )}
-            </tr>
-        </table>
-    </div>
-    );
+
+    return (
+        <div className="main_view">
+            <table>
+                <tbody>
+                <tr>
+                   <td className="mainView_aside">
+                        <Aside click={setChannel} show={setShowReplies} />   
+                    </td> 
+                    <td className={!showReplies ? "feed_only": "feed_thread"}>
+                        <div>{giveThreads(channel)}</div>
+                        <Reply class1={!showReplies ? "reply1": "reply2"} class2={!showReplies ? "textArea1": "textArea2"} />
+                    </td>
+                    
+                    {showReplies && (
+                        <td className="threadContent">
+                        <Reply class1="reply3" class2="textArea3" />
+                        </td>)}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    )
 }

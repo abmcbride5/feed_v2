@@ -1,15 +1,21 @@
+.aside{
+    width: 100%;
+}
 .purple_aside {
-    width: 5em;
+    width: 20em;
     height: 50em;
     border-right: 0.1px solid #B19CD9;
     z-index:2;
 }
 .purple_menu_top {
     height: 3em;
-    width: 15em;
+    width: 17em;
     border-bottom: 0.1px solid #B19CD9 ;
 }
 .purple_menu_bottom {
-    height: 45em;
-    width: 15em;
+    height: 47em;
+    width: 17em;
+}
+.channel_header {
+    padding-left: 0.5em;
 }

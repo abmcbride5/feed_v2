@@ -1,31 +1,41 @@
-.main {
+.main_view {
     color: white;
 }
-.aside {
+.mainView_aside {
     position: fixed;
-    width: 20em;
+    width: 23%;
     height: 200em;
     background-color: #3f0f3f;
     z-index:1;
 }
-.feed {
+.feed_only {
     position: fixed;
     color: black;
-    left: 40em;
-    width: 33%;
+    left: 24.8em;
+    width: 75%;
+    height: 100%;
     /* overflow-y:scroll; */
 
 }
+.feed_thread {
+    position: fixed;
+    color: black;
+    left: 18.7em;
+    width: 46.6;
+    height: 100%;
+    /* overflow-y:scroll; */
+
+}
+
 .threadContent{
     position: fixed;
     color: black;
     border-left: 0.5px solid black;
-    /* padding: 1%; */
+    width: 42.8%;
     height: 100%;
-    left: 59em;
-    top: 5em;
+    left: 55.2em;
     z-index: -1;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 .threadContentMessages{
     position: relative;

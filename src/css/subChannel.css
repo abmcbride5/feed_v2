@@ -1,7 +1,9 @@
 .sub_channel_button {
-    text-align: center;
+    text-align: left;
+    width: 19.5em;
     border: none;
     background-color: transparent;
     color: white;
-    margin: 5%;
+    margin: 3%;
+    padding-left: 1em;
 }
