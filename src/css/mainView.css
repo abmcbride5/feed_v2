@@ -46,9 +46,14 @@
 hr {
     position: relative;
     top: 3em;
-    left: -44em;
-    width: 45em;
+    left: -18em;
+    width: 18em;
 }
 .bottom_background {
     background-color: white;
+}
+.threadSideCount{
+    position: relative;
+    left: -16em;
+    top: 4.5em;
 }

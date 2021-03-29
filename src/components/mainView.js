@@ -14,7 +14,7 @@ export default function Main(){
     const [showReplies, setShowReplies] = useState(false);
     const placeHolder = 'message #' + channel;
 
-    function giveThreads(channelSelected){
+    function giveThreads(channelSelected, messageClass, replyClass){
         
         const threadList = Object.values(threads);
         
@@ -30,6 +30,8 @@ export default function Main(){
                     click1={setRepliesList} 
                     click2={setShowReplies} 
                     click3={setLeadingThread}
+                    class={messageClass}
+                    replyClass={replyClass}
                 />)
                 
             } 
@@ -42,8 +44,10 @@ export default function Main(){
         let renderRepliesList = [
         <MessageBox 
             message={mainMessage} 
-            by='123' />, 
-        <p className="">{messageList.length} replies</p>,
+            by='123'
+            class='messageContainerThread1'
+            />, 
+        <p className="threadSideCount">{messageList.length} replies</p>,
         <hr />
         ];
 
@@ -55,6 +59,7 @@ export default function Main(){
             <MessageBox 
                 message={temp.messageBody} 
                 by={temp.author} 
+                class='messageContainerThread'
             />)
         }
         return renderRepliesList;    
@@ -74,7 +79,7 @@ export default function Main(){
                     </td> 
 
                     <td className={!showReplies ? "feed_only": "feed_thread"}>
-                        <div>{giveThreads(channel)}</div>
+                        <div>{!showReplies ? giveThreads(channel, 'messageContainer', 'replyTable') : giveThreads(channel, 'messageContainerShowReplies', 'replyTableShowReplies')}</div>
                         <Reply 
                             class1={!showReplies ? "reply1": "reply2"} 
                             class2={!showReplies ? "textArea1": "textArea2"} 

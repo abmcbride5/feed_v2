@@ -12,11 +12,12 @@ export default function Threads(props){
     return(
         <div className="threadContainer">
             <MessageBox 
-            message={props.title} 
-            by={props.by}
-            time={'5:30'}
+                message={props.title} 
+                by={props.by}
+                time={'5:30'}
+                class={props.class}
             />
-            <table className="replyTable">
+            <table className={props.replyClass}>
                 <tr>
             {props.replies.map((reply) => (
             <td className="fakePhotoThread"></td>
