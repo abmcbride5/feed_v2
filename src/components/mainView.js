@@ -83,6 +83,7 @@ export default function Main(){
                         <Reply 
                             class1={!showReplies ? "reply1": "reply2"} 
                             class2={!showReplies ? "textArea1": "textArea2"} 
+                            holder={placeHolder}
                         />
                     </td>
                     

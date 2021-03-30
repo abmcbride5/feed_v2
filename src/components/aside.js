@@ -14,7 +14,6 @@ export default function Aside (props) {
                 </td>
                 <td>
                     <div className="purple_menu_top">
-                        {/* <img src="../images/buttons.png" width="15" height="15" /> */}
                         <MainChannel name="Buttons For Kittens"/>
                     </div>
                     <div className="purple_menu_bottom">
